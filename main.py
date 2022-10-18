@@ -43,6 +43,9 @@ response = requests.post("https://api.ai21.com/studio/v1/experimental/j1-grande-
     }
 )
 
+
+st.write(response.status_code)
+
 if response.status_code != 200:
     raise Exception(f"Completion request failed with status {response.status_code}")
 
